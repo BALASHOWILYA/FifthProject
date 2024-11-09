@@ -12,6 +12,9 @@ import androidx.fragment.app.Fragment;
 public class MainActivity extends AppCompatActivity {
 
     private GoogleMapFragment googleMapFragment = new GoogleMapFragment();
+    private GoogleMapPolygonFragment googleMapPolygonFragment = new GoogleMapPolygonFragment();
+    private GoogleMapMode googleMapMode = new GoogleMapMode();
+
 
 
     @Override
@@ -25,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
-        addFragment(googleMapFragment, R.id.fragment_container);
+        addFragment(googleMapMode, R.id.fragment_container);
     }
 
     private  void addFragment(Fragment fragment, int containerId){

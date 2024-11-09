@@ -6,11 +6,30 @@
     android:orientation="vertical"
     tools:context=".GoogleMapFragment">
 
-    <Button
-        android:id="@+id/add_marker_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Добавить маркер"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/add_marker_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="8dp"
+            android:padding="8dp"
+            android:text="Добавить маркер"/>
+
+        <Button
+            android:id="@+id/draw_lines_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+
+            android:padding="8dp"
+            android:text="Draw Lines"
+            android:layout_weight="2" />
+
+    </LinearLayout>
+
 
     <fragment
         android:id="@+id/map"
