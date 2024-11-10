@@ -9,11 +9,23 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.fragment.app.Fragment;
 
+import org.koin.java.KoinJavaComponent;
+
 public class MainActivity extends AppCompatActivity {
 
+    /*
+    private GoogleMapFragment googleMapFragment = (GoogleMapFragment) KoinJavaComponent.inject(GoogleMapFragment.class).getValue();
+    private GoogleMapPolygonFragment googleMapPolygonFragment = (GoogleMapPolygonFragment) KoinJavaComponent.inject(GoogleMapPolygonFragment.class).getValue();
+    private GoogleMapMode googleMapMode = (GoogleMapMode) KoinJavaComponent.inject(GoogleMapMode.class).getValue();
+    private DistanceFragment distanceFragment = (DistanceFragment) KoinJavaComponent.inject(DistanceFragment.class).getValue();
+    */
     private GoogleMapFragment googleMapFragment = new GoogleMapFragment();
     private GoogleMapPolygonFragment googleMapPolygonFragment = new GoogleMapPolygonFragment();
     private GoogleMapMode googleMapMode = new GoogleMapMode();
+    private DistanceFragment distanceFragment = new DistanceFragment();
+
+
+
 
 
 
@@ -28,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
-        addFragment(googleMapMode, R.id.fragment_container);
+        addFragment(googleMapFragment, R.id.fragment_container);
     }
 
     private  void addFragment(Fragment fragment, int containerId){
